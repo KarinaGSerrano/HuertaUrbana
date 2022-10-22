@@ -106,6 +106,18 @@ p {
   line-height: 1.5;
 }
 
+.btn {
+  display: block;
+  color: rgba(255, 255, 248, 1);
+  background-color: #34b196;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 2.5rem;
+  border-radius: 3%;
+  text-align: center;
+  width: 50%;
+}
+
 /* ------------------M O B I L E  F I R S T :  E S T I L O  C E L U L A R--------------- */
 /* ------------------------------------------------------------------------------------- */
 
@@ -242,13 +254,7 @@ nav:target #hamburguesa li:last-child {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: rgba(255, 255, 248, 1);
-  background-color: #34b196;
-  border-radius: 3%;
-  padding: 1rem 2.5rem;
+  width: 100%;
 }
 
 .btn-seguir-chevron-down {
@@ -446,6 +452,7 @@ nav:target #hamburguesa li:last-child {
 .contenedor-newsletter h2 {
   color: white;
   margin: 0;
+  width: 90%;
 }
 
 .contenedor-newsletter h2::before {
@@ -474,19 +481,6 @@ nav:target #hamburguesa li:last-child {
 
 .contenedor-newsletter input:first-of-type {
   margin-bottom: 1.5rem;
-}
-
-.contenedor-newsletter a:link,
-.contenedor-newsletter a:visited {
-  display: block;
-  width: 50%;
-  text-align: center;
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: rgba(255, 255, 248, 1);
-  background-color: #34b196;
-  border-radius: 3%;
-  padding: 1rem;
 }
 
 /*----------------------- S E C C I O N  -  N O S O T R O S ---------------------- */
@@ -595,7 +589,7 @@ footer {
     rgba(208, 169, 10, 1) 47%,
     rgba(150, 92, 21, 1) 97%
   );
-  padding: 6rem 3rem 2rem 3rem;
+  padding: 9rem 3rem 2rem 3rem;
   box-shadow: 0 -2.4rem 4.8rem rgba(233, 235, 177, 1);
 }
 
@@ -650,18 +644,8 @@ textarea {
   font-size: 1.2rem;
 }
 
-.btn-enviar:link,
-.btn-enviar:visited {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-  text-align: center;
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: rgba(255, 255, 248, 1);
-  background-color: #34b196;
-  border-radius: 3%;
-  padding: 1rem;
+.btn-enviar {
+  align-self: center;
 }
 
 .footer-redes-sociales {

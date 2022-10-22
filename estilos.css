@@ -1,5 +1,36 @@
 /*-------------------------E S T I L O S  G E N E R A L E S---------------------------- */
-/* ----------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------ */
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -14,12 +45,55 @@ html {
 body {
   font-family: "Lato", sans-serif;
   color: #595959;
-  line-height: 1.5;
   background: linear-gradient(
     180deg,
     rgba(240, 241, 208, 1) 2%,
     rgba(255, 255, 248, 1) 7%
   );
+}
+
+h1 {
+  font-size: 2.7rem;
+  line-height: 1.5;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mali", cursive;
+  font-size: 2.4rem;
+  color: #34b196;
+  margin-bottom: 2rem;
+}
+
+h2:before {
+  content: "";
+  border-top: 2px solid;
+  margin: 0 0.5rem 0 0;
+  flex: 0 1 4rem;
+  color: #34b196;
+}
+
+h3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #595959;
+  padding-bottom: 3rem;
+  line-height: 1.5;
+}
+
+h4 strong {
+  font-family: "Mali", cursive;
+  font-weight: 900;
+  color: #34b196;
 }
 
 section {
@@ -28,14 +102,12 @@ section {
 
 p {
   padding-bottom: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 /* ------------------M O B I L E  F I R S T :  E S T I L O  C E L U L A R--------------- */
 /* ------------------------------------------------------------------------------------- */
-/* .contenedor-header {
-  max-width: 415px;
-  margin: auto;
-} */
 
 .contenedor {
   padding: 0 2rem;
@@ -46,19 +118,15 @@ p {
 
 header {
   display: flex;
-  /* margin-top: 2rem;
-  margin-bottom: 3rem; */
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
   padding: 2rem 0;
-  /* margin: 2rem 0; */
 }
 
 .nav-margin {
@@ -69,7 +137,6 @@ nav {
   list-style: none;
   text-indent: -100px;
   overflow: hidden;
-  /* margin-top: 1.4em; */
   width: 2.5em;
 }
 
@@ -123,11 +190,6 @@ nav {
   border-radius: 5%;
 }
 
-/* #hamburguesa {
-  display: flex;
-  justify-content: flex-end;
-} */
-
 nav:target #lista-btn {
   height: calc(100vh - 6.5em);
 }
@@ -160,14 +222,12 @@ nav:target #hamburguesa li:last-child {
 .portada-titulo {
   font-family: "Mali", cursive;
   color: #34b196;
-  font-size: 2.5rem;
   font-weight: 600;
-  width: 90%;
+  width: 95%;
   margin-bottom: 1rem;
 }
 
 .portada-texto {
-  font-size: 1.5rem;
   font-weight: 300;
   width: 60%;
   color: black;
@@ -191,10 +251,6 @@ nav:target #hamburguesa li:last-child {
   padding: 1rem 2.5rem;
 }
 
-.btn-seguir a:hover {
-  background-color: #5fb6a3;
-}
-
 .btn-seguir-chevron-down {
   width: 2rem;
   height: 2rem;
@@ -203,7 +259,7 @@ nav:target #hamburguesa li:last-child {
 /*-------------------- S E C C I O N  -  A R T Í C U L O  H U E R T A-------------------- */
 
 .seccion-huerta {
-  margin-bottom: 0;
+  margin-bottom: -1rem;
 }
 
 .huerta-titulo {
@@ -211,25 +267,8 @@ nav:target #hamburguesa li:last-child {
   margin-bottom: 1rem;
 }
 
-.huerta-titulo h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Mali", cursive;
-  color: #34b196;
-  font-size: 1.8rem;
-}
-
-.huerta-titulo h2:before {
-  content: "";
-  border-top: 2px solid;
-  margin: 0 1rem 0 0;
-  flex: 0 1 4rem;
-  color: #34b196;
-}
-
-.huerta-titulo span {
-  font-size: 1.4rem;
+.huerta-titulo p:first-of-type {
+  padding: 0;
 }
 
 .huerta-gota-link {
@@ -237,7 +276,6 @@ nav:target #hamburguesa li:last-child {
   justify-content: center;
   align-items: center;
   background: url(./Imagenes/huerta-link-celular.png) center no-repeat;
-  /* background-position: 20% 0%; */
   height: 5rem;
   width: 4rem;
   opacity: 40%;
@@ -269,7 +307,8 @@ nav:target #hamburguesa li:last-child {
   display: none;
 }
 
-/* --- TARGET ARTICULOS HUERTA --- */
+/* --- T A R G E T  A R T Í C U L O S  H U E R T A --- */
+
 .huerta-gota-link:target {
   opacity: 100%;
 }
@@ -286,16 +325,7 @@ nav:target #hamburguesa li:last-child {
   display: block;
 }
 
-/* --- TARGET ARTICULOS HUERTA --- */
-
-h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.huerta-articulo p {
-  font-size: 1.3rem;
-}
+/* ------------------------------------------------------ */
 
 .huerta-articulo img {
   display: block;
@@ -317,8 +347,6 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   transform: translateY(8rem);
-  /* position: relative; */
-  /* overflow-x: hidden; */
 }
 
 .banner-texto {
@@ -342,30 +370,6 @@ h3 {
 
 /*----------------------- S E C C I O N  -  B E N E F I C I O S-------------------- */
 
-.seccion-beneficios h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Mali", cursive;
-  color: #34b196;
-  font-size: 1.8rem;
-}
-
-.seccion-beneficios h2:before {
-  content: "";
-  border-top: 2px solid;
-  margin: 0 1rem 0 0;
-  flex: 0 1 4rem;
-  color: #34b196;
-}
-
-.seccion-beneficios h3 {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: left;
-}
-
 .seccion-beneficios h3:after {
   content: "";
   border-bottom: 2px solid black;
@@ -373,18 +377,11 @@ h3 {
   width: 5rem;
 }
 
-.seccion-beneficios span {
-  display: inline-block;
-  font-size: 1.4rem;
-  margin-bottom: 3rem;
-}
-
 /*-- I M P A C T O  E C O L Ó G I C O-- */
 
 .impacto-articulo {
   display: flex;
   flex-direction: column;
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -393,24 +390,22 @@ h3 {
   height: 26rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
 .impacto-info p {
   display: block;
   margin: 0 auto;
-  width: 52%;
-  font-size: 1.3rem;
+  width: 60%;
+  font-size: 1.45rem;
   color: #34b196;
   font-family: "Mali", cursive;
   font-weight: 500;
+  text-align: center;
 }
 
 /*-- A L I M E N T O S  S A L U D A B L E S -- */
-
-.alimentos-articulo p {
-  font-size: 1.3rem;
-}
 
 .alimentos-video {
   max-width: 100%;
@@ -433,8 +428,8 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url(./Imagenes/img-newsletter.png) center no-repeat;
-  height: 33rem;
+  background: url(./Imagenes/img-newsletter-celular.png) center no-repeat;
+  height: 41rem;
   box-shadow: 0 -2.4rem 4.8rem rgba(233, 235, 177, 1);
 }
 
@@ -450,13 +445,16 @@ h3 {
 
 .contenedor-newsletter h2 {
   color: white;
-  font-size: 1.8rem;
+  margin: 0;
+}
+
+.contenedor-newsletter h2::before {
+  content: none;
 }
 
 .contenedor-newsletter p {
   display: block;
-  width: 75%;
-  font-size: 1.3rem;
+  width: 90%;
   color: white;
   padding: 0;
 }
@@ -471,7 +469,7 @@ h3 {
 
 .contenedor-newsletter input::placeholder {
   color: grey;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .contenedor-newsletter input:first-of-type {
@@ -483,7 +481,7 @@ h3 {
   display: block;
   width: 50%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-decoration: none;
   color: rgba(255, 255, 248, 1);
   background-color: #34b196;
@@ -498,27 +496,7 @@ h3 {
 }
 
 .seccion-nosotros h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Mali", cursive;
-  color: #34b196;
-  font-size: 1.8rem;
   margin-bottom: 1rem;
-}
-
-.seccion-nosotros h2:before {
-  content: "";
-  border-top: 2px solid;
-  margin: 0 1rem 0 0;
-  flex: 0 1 4rem;
-  color: #34b196;
-}
-
-.seccion-nosotros h3 {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
 }
 
 .seccion-nosotros h3:after {
@@ -526,10 +504,6 @@ h3 {
   border-bottom: 2px solid black;
   padding-top: 0.5rem;
   width: 3rem;
-}
-
-.seccion-nosotros p {
-  font-size: 1.3rem;
 }
 
 /*-- A C E R C A  D E -- */
@@ -541,21 +515,8 @@ h3 {
       rgba(241, 242, 210, 1) 31%,
       rgba(195, 235, 246, 1) 85%
     );
-  padding: 2rem;
+  padding: 4rem 2rem;
   margin-bottom: 4rem;
-}
-
-h4 {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #595959;
-  padding-bottom: 3rem;
-}
-
-h4 strong {
-  font-family: "Mali", cursive;
-  font-weight: 900;
-  color: #34b196;
 }
 
 .acerca-texto {
@@ -623,11 +584,12 @@ h4 strong {
   margin-left: auto;
   margin-right: auto;
   transform: translateY(5rem);
-  /* position: relative; */
-  /* overflow-x: hidden; */
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background: linear-gradient(
     180deg,
     rgba(208, 169, 10, 1) 47%,
@@ -640,44 +602,25 @@ footer {
 .footer-texto {
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
 }
 
 .footer-texto h2 {
-  display: flex;
-  align-items: center;
-  font-family: "Mali", cursive;
   color: white;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 .footer-texto h2:before {
-  content: "";
-  border-top: 2px solid;
-  margin: 0 1rem 0 0;
-  flex: 0 1 4rem;
   color: white;
 }
 
 .footer-texto p {
   color: white;
-  font-size: 1.3rem;
-}
-
-.seccion-footer h3 {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  margin-bottom: 2rem;
 }
 
 .seccion-footer h3:after {
   content: "";
   border-bottom: 1px solid #595959;
   padding-top: 0.5rem;
-  width: 26rem;
+  width: 100%;
 }
 
 .seccion-footer form {
@@ -686,7 +629,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 
 .seccion-footer input,
@@ -700,22 +642,21 @@ textarea {
 
 .seccion-footer input::placeholder {
   color: grey;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .seccion-footer textarea::placeholder {
   color: grey;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .btn-enviar:link,
 .btn-enviar:visited {
   display: block;
   margin: 0 auto;
-  margin-bottom: 2rem;
   width: 50%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-decoration: none;
   color: rgba(255, 255, 248, 1);
   background-color: #34b196;
@@ -724,12 +665,12 @@ textarea {
 }
 
 .footer-redes-sociales {
-  display: flex;
-  justify-content: space-evenly;
+  margin-bottom: 8rem;
 }
 
-.footer-pie {
-  margin-top: 8rem;
+.footer-iconos-redes-sociales {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .footer-pie p {
@@ -738,6 +679,7 @@ textarea {
   align-items: center;
   color: rgba(255, 255, 248, 1);
   padding: 0;
+  font-size: 1.2rem;
 }
 
 .footer-pie p::before {
@@ -747,8 +689,39 @@ textarea {
   width: 26rem;
 }
 
-/* ----------------------- E S T I L O  C E L U L A R  G R A N D E ------------------------- */
+/* -------------------------------- E S T I L O  T A B L E T ------------------------------- */
 /* ----------------------------------------------------------------------------------------- */
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 768px) {
+  #hamburguesa li a {
+    background: url("./Imagenes/menu-tablet.png") no-repeat center center;
+  }
+
+  #hamburguesa li:last-child a {
+    background: url("./Imagenes/menu-cerrar-tablet.png") no-repeat center center;
+  }
+
+  .seccion-portada {
+    background: url(./Imagenes/regadera-tablet.png) center no-repeat;
+  }
+
+  .huerta-gota-link {
+    background: url(./Imagenes/huerta-link-tablet.png) center no-repeat;
+  }
+
+  .impacto-info {
+    background: url(./Imagenes/img-impacto-info-tablet.png) center no-repeat;
+  }
+
+  .contenedor-video {
+    background: url(./Imagenes/img-background-video-tablet.png) center no-repeat;
+  }
+
+  .seccion-newsletter {
+    background: url(./Imagenes/img-newsletter-tablet.png) center no-repeat;
+  }
+
+  .acerca-articulo {
+    background: url(./Imagenes/img-nosotros-plantas-tablet.png) bottom no-repeat;
+  }
 }

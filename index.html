@@ -18,20 +18,26 @@
       href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="estilos.css" />
     <title>Karina Serrano, DWN2C, Turno Noche, 2022</title>
   </head>
 
+  <!------ M E N U -------->
   <body>
     <div class="contenedor-header contenedor">
       <header>
         <nav id="menu">
           <div id="logo-header">
-            <img
-              src="./Imagenes/logo-celular.png"
-              alt="logo vegetales en mi balcon"
-            />
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/logo-tablet.png"
+              />
+              <img
+                src="./Imagenes/logo-celular.png"
+                alt="logo vegetales en mi balcon"
+              />
+            </picture>
           </div>
 
           <ul id="hamburguesa">
@@ -51,7 +57,8 @@
       </header>
     </div>
 
-    <!-- P O R T A D A -->
+    <!------------------------ S E C C I O N  -   P O R T A D A---------------------->
+
     <section class="seccion-portada">
       <div class="contenedor-portada contenedor">
         <h1 class="portada-titulo">
@@ -82,17 +89,16 @@
         </div>
       </div>
     </section>
-
-    <!-- H U E R T A  U R B A N A -->
+    <!-------------------- S E C C I O N  -  A R T Í C U L O  H U E R T A-------------------->
 
     <section id="id-huerta" class="seccion-huerta">
       <div class="contenedor-huerta contenedor">
         <div class="huerta-titulo">
           <h2>Huerta Urbana</h2>
-          <span
-            >Consejos para iniciar con tu huerta en casa en espacios reducidos.
-            <strong>Presioná en cada consejo:</strong></span
-          >
+          <p>
+            Consejos para iniciar con tu huerta en casa en espacios reducidos.
+            <p><strong>Presioná en cada consejo:</strong></p>
+          </p>
         </div>
 
         <div class="huerta-gota-link" id="huerta-1">
@@ -107,9 +113,8 @@
 
         <article class="huerta-articulo">
           <h3>Busca el posicionamiento del sol en tu hogar</h3>
-          <p>
-            Busca el posicionamiento del sol en tu hogar 2 Mantén la simpleza.
-            Las verduras necesitan 3 cosas para crecer: Suelo saludable y
+          <p>            
+            Las verduras necesitan 3 cosas para crecer:  Suelo saludable y
             nutritivo, la cantidad adecuada de agua y luz solar.
           </p>
           <p>
@@ -122,7 +127,10 @@
             <!-- desktop -->
             <source media="(min-width: 500px)" srcset="./assets/mobile.jpeg" />
             <!-- tablet -->
-            <source media="(min-width: 700px)" srcset="./assets/md.png" />
+            <source
+              media="(min-width: 768px)"
+              srcset="./Imagenes/huerta-img1-tablet.png"
+            />
             <!-- mobile -->
             <img
               class="img-huerta img-huerta-1"
@@ -135,8 +143,8 @@
         <article class="huerta-articulo">
           <h3>Mantén la simpleza.</h3>
           <p>
-            “Más puede significar menos” Cada verdura tiene distinto proceso de
-            crecimiento, por lo que si tu objetivo es lograr el resul tado final
+            <em>“Más puede significar menos”</em> Cada verdura tiene distinto proceso de
+            crecimiento, por lo que si tu objetivo es lograr el resultado final
             de disfrutar sus frutos, deberás aprender a cerca de sus cuidados
             ¡Empieza por tu vegetal favorito!.
           </p>
@@ -150,11 +158,14 @@
             <!-- desktop -->
             <source media="(min-width: 500px)" srcset="./assets/mobile.jpeg" />
             <!-- tablet -->
-            <source media="(min-width: 700px)" srcset="./assets/md.png" />
+            <source
+              media="(min-width: 768px)"
+              srcset="./Imagenes/huerta-img2-tablet.png"
+            />
             <!-- mobile -->
             <img
               class="img-huerta img-huerta-2"
-              src="./Imagenes/huerta-img2-celular.png"
+              src="./Imagenes/huerta-img2-celular_1.png"
               alt="pasos para una huerta urbana"
             />
           </picture>
@@ -181,7 +192,10 @@
             <!-- desktop -->
             <source media="(min-width: 500px)" srcset="./assets/mobile.jpeg" />
             <!-- tablet -->
-            <source media="(min-width: 700px)" srcset="./assets/md.png" />
+            <source
+              media="(min-width: 768px)"
+              srcset="./Imagenes/huerta-img3-tablet.png"
+            />
             <!-- mobile -->
             <img
               class="img-huerta img-huerta-3"
@@ -192,15 +206,17 @@
         </article>
       </div>
     </section>
-
-    <!-- B A N N E R -->
+    <!------------------------- S E C C I O N  -  B A N N E R--------------------------->
 
     <div class="seccion-banner">
       <picture>
         <!-- desktop -->
         <source media="(min-width: 500px)" srcset="./assets/mobile.jpeg" />
         <!-- tablet -->
-        <source media="(min-width: 700px)" srcset="./assets/md.png" />
+        <source
+          media="(min-width: 768px)"
+          srcset="./Imagenes/img-banner-semillas-tablet.png"
+        />
         <!-- mobile -->
         <img
           class=""
@@ -213,13 +229,14 @@
         <p>“Una pequeña acción puede tener una gran repercusión”.</p>
       </div>
     </div>
-
-    <!--B E N E F I C I O S -->
+    <!----------------------- S E C C I O N  -  B E N E F I C I O S-------------------->
 
     <section id="id-beneficios" class="seccion-beneficios">
       <div class="contenedor-beneficios contenedor">
         <h2>Beneficios</h2>
-        <span>Cultivando tus propios vegetales lograrás:</span>
+        <p>Cultivando tus propios vegetales lograrás:</p>
+
+        <!-- -- I M P A C T O  E C O L Ó G I C O-- -->
 
         <article class="impacto-articulo">
           <h3>Impacto ecológico</h3>
@@ -232,7 +249,10 @@
                 srcset="./assets/mobile.jpeg"
               />
               <!-- tablet -->
-              <source media="(min-width: 700px)" srcset="./assets/md.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/img-beneficios-1-tablet.png"
+              />
               <!-- mobile -->
               <img
                 class="img-huerta img-huerta-3"
@@ -251,7 +271,10 @@
                 srcset="./assets/mobile.jpeg"
               />
               <!-- tablet -->
-              <source media="(min-width: 700px)" srcset="./assets/md.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/img-beneficios-2-tablet.png"
+              />
               <!-- mobile -->
               <img
                 class="img-huerta img-huerta-3"
@@ -272,7 +295,10 @@
                 srcset="./assets/mobile.jpeg"
               />
               <!-- tablet -->
-              <source media="(min-width: 700px)" srcset="./assets/md.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/img-beneficios-3-tablet.png"
+              />
               <!-- mobile -->
               <img
                 class="img-huerta img-huerta-3"
@@ -294,7 +320,10 @@
                 srcset="./assets/mobile.jpeg"
               />
               <!-- tablet -->
-              <source media="(min-width: 700px)" srcset="./assets/md.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/img-beneficios-4-tablet.png"
+              />
               <!-- mobile -->
               <img
                 class="img-huerta img-huerta-3"
@@ -307,6 +336,8 @@
             </p>
           </div>
         </article>
+
+        <!---- A L I M E N T O S  S A L U D A B L E S ---->
 
         <article class="alimentos-articulo">
           <h3>Alimentos saludables</h3>
@@ -343,10 +374,9 @@
         </article>
       </div>
     </section>
+    <!-------------------- S E C C I O N  -  N E W S L E T T E R -------------------->
 
-    <!-- F O R M   N E W S L E T T E R -->
-
-    <section class="seccion-newsletter">
+    <section id="seccion-newsletter" class="seccion-newsletter">
       <div class="contenedor-newsletter">
         <h2>¡Suscribite a nuestro newsletter!</h2>
         <p>
@@ -360,13 +390,15 @@
         <a href="#">Suscribirme</a>
       </div>
     </section>
-
-    <!-- N O S O T R O S -->
+    <!----------------------- S E C C I O N  -  N O S O T R O S ---------------------->
 
     <section id="id-nosotros" class="seccion-nosotros">
       <h2>Nosotros</h2>
 
       <div class="contenedor-articulo">
+
+        <!-- - A C E R C A  D E ---->
+
         <article class="acerca-articulo">
           <h3>Acerca de</h3>
 
@@ -443,7 +475,10 @@
                 srcset="./assets/mobile.jpeg"
               />
               <!-- tablet -->
-              <source media="(min-width: 700px)" srcset="./assets/md.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/img-nosotros-tablet.png"
+              />
               <!-- mobile -->
               <img
                 class=""
@@ -454,6 +489,8 @@
           </div>
         </article>
       </div>
+
+      <!---- M I S I Ó N ---->
 
       <div class="contenedor-articulo contenedor">
         <article class="mision-articulo">
@@ -467,7 +504,10 @@
                 srcset="./assets/mobile.jpeg"
               />
               <!-- tablet -->
-              <source media="(min-width: 700px)" srcset="./assets/md.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./Imagenes/img-mision-tablet.png"
+              />
               <!-- mobile -->
               <img
                 class=""
@@ -486,7 +526,7 @@
 
             <p>
               Hemos planificado cuidadosamente guías mensuales accesibles con la
-              suscripción en nuestro newsletter, con variedades específicas de
+              suscripción en nuestro <a href="#seccion-newsletter">newsletter</a>, con variedades específicas de
               hortalizas, elegidas para prosperar en espacios pequeños en su
               temporada más productiva. Si tiene un espacio en un balcón,
               terraza o patio, nos encantaría ayudarlo a crear y cuidar su
@@ -496,15 +536,17 @@
         </article>
       </div>
     </section>
-
-    <!-- F O O T E R -->
+    <!------------------------- S E C C I O N  -  F O O T E R ------------------------>
 
     <div class="seccion-footer">
       <picture class="img-footer">
         <!-- desktop -->
         <source media="(min-width: 500px)" srcset="./assets/mobile.jpeg" />
         <!-- tablet -->
-        <source media="(min-width: 700px)" srcset="./assets/md.png" />
+        <source
+          media="(min-width: 768px)"
+          srcset="./Imagenes/img-footer-tablet.png"
+        />
         <!-- mobile -->
         <img
           class=""
@@ -542,18 +584,20 @@
 
         <a href="" class="btn-enviar">Enviar</a>
 
-        <h3>Redes Sociales</h3>
-
         <div class="footer-redes-sociales">
-          <a href="https://facebook.com" target="_blank"
-            ><img src="./Imagenes/red-social-facebook-celular.png"
-          /></a>
-          <a href="https://instagram.com" target="_blank"
-            ><img src="./Imagenes/red-social-instagram-celular.png"
-          /></a>
-          <a href="https://twitter.com" target="_blank"
-            ><img src="./Imagenes/red-social-twitter-celular.png"
-          /></a>
+          <h3>Redes Sociales</h3>
+
+          <div class="footer-iconos-redes-sociales">
+            <a href="https://facebook.com" target="_blank"
+              ><img src="./Imagenes/red-social-facebook-celular.png"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img src="./Imagenes/red-social-instagram-celular.png"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img src="./Imagenes/red-social-twitter-celular.png"
+            /></a>
+          </div>
         </div>
 
         <div class="footer-pie">

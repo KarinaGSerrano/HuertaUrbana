@@ -149,7 +149,7 @@ nav {
   list-style: none;
   text-indent: -100px;
   overflow: hidden;
-  width: 2.5em;
+  /* width: 2.5em; */
 }
 
 #hamburguesa li a {
@@ -220,7 +220,7 @@ nav:target #hamburguesa li:last-child {
   display: flex;
   align-items: flex-start;
   background: url(./Imagenes/regadera-celular.png) center no-repeat;
-  height: 38rem;
+  height: calc(100vh - 10rem);
   background-position: 0% 0%;
   margin-top: 1.5rem;
 }
@@ -228,7 +228,9 @@ nav:target #hamburguesa li:last-child {
 .contenedor-portada {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 1rem;
 }
 
 .portada-titulo {
@@ -279,6 +281,7 @@ nav:target #hamburguesa li:last-child {
 
 .huerta-gota-link {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url(./Imagenes/huerta-link-celular.png) center no-repeat;
@@ -286,14 +289,14 @@ nav:target #hamburguesa li:last-child {
   width: 4rem;
   opacity: 40%;
   position: absolute;
+  color: #595959;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .huerta-gota-link a:link,
 .huerta-gota-link a:visited {
   text-decoration: none;
-  color: #595959;
-  font-size: 1.4rem;
-  font-weight: 600;
 }
 
 #huerta-1 {
@@ -332,6 +335,10 @@ nav:target #hamburguesa li:last-child {
 }
 
 /* ------------------------------------------------------ */
+
+.huerta-gota-icon {
+  display: none;
+}
 
 .huerta-articulo img {
   display: block;
@@ -376,6 +383,12 @@ nav:target #hamburguesa li:last-child {
 
 /*----------------------- S E C C I O N  -  B E N E F I C I O S-------------------- */
 
+/*-- I M P A C T O  E C O L Ó G I C O-- */
+
+.impacto-articulo {
+  margin-bottom: 3rem;
+}
+
 .seccion-beneficios h3:after {
   content: "";
   border-bottom: 2px solid black;
@@ -383,17 +396,17 @@ nav:target #hamburguesa li:last-child {
   width: 5rem;
 }
 
-/*-- I M P A C T O  E C O L Ó G I C O-- */
-
-.impacto-articulo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
+.impacto-items {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
 }
 
 .impacto-info {
   background: url(./Imagenes/img-impacto-info-celular.png) center no-repeat;
-  height: 26rem;
+  height: 25.6rem;
+  width: 22.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -419,12 +432,16 @@ nav:target #hamburguesa li:last-child {
   margin-top: 4rem;
 }
 
-.contenedor-video {
+.contenedor-video iframe {
+  width: 100%;
+}
+
+/* .contenedor-video {
   background: url(./Imagenes/img-background-video-celular.png) center no-repeat;
   height: 25rem;
   display: flex;
   justify-content: center;
-}
+} */
 
 /*-------------------- S E C C I O N  -  N E W S L E T T E R -------------------- */
 
@@ -439,7 +456,7 @@ nav:target #hamburguesa li:last-child {
   box-shadow: 0 -2.4rem 4.8rem rgba(233, 235, 177, 1);
 }
 
-.contenedor-newsletter {
+/* .contenedor-newsletter {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,26 +464,44 @@ nav:target #hamburguesa li:last-child {
   gap: 1.5rem;
   background-color: rgba(102, 80, 27, 0.6);
   padding: 2rem 0;
+} */
+
+.contenedor-newsletter {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  background-color: rgba(102, 80, 27, 0.6);
+  padding: 4rem 0;
 }
 
-.contenedor-newsletter h2 {
+.texto-newsletter,
+.form-newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.texto-newsletter h2 {
   color: white;
   margin: 0;
   width: 90%;
 }
 
-.contenedor-newsletter h2::before {
+.texto-newsletter h2::before {
   content: none;
 }
 
-.contenedor-newsletter p {
+.texto-newsletter p {
   display: block;
   width: 90%;
   color: white;
   padding: 0;
 }
 
-.contenedor-newsletter input {
+.form-newsletter input {
   width: 80%;
   border: none;
   background: white;
@@ -474,13 +509,18 @@ nav:target #hamburguesa li:last-child {
   padding: 1rem;
 }
 
-.contenedor-newsletter input::placeholder {
+.form-newsletter input::placeholder {
   color: grey;
   font-size: 1.4rem;
 }
 
-.contenedor-newsletter input:first-of-type {
+.form-newsletter input:first-of-type {
   margin-bottom: 1.5rem;
+}
+
+input[type="email"]:focus:invalid {
+  border: solid red 2px;
+  color: red;
 }
 
 /*----------------------- S E C C I O N  -  N O S O T R O S ---------------------- */
@@ -677,35 +717,297 @@ textarea {
 /* ----------------------------------------------------------------------------------------- */
 
 @media screen and (min-width: 768px) {
+  /* GENERALES */
+
+  h1 {
+    font-size: 5.6rem;
+    /* font-size: 4.4rem; */
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    margin-bottom: 4rem;
+  }
+
+  h2:before {
+    border-top: 4px solid;
+    margin: 0 1rem 0 0;
+    flex: 0 1 8rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+    font-weight: bolder;
+    padding-bottom: 6rem;
+  }
+
+  section {
+    margin-bottom: 16rem;
+  }
+
+  p {
+    padding-bottom: 2.8rem;
+    font-size: 2rem;
+    line-height: 1.8;
+  }
+
+  .btn {
+    font-size: 2.4rem;
+    padding: 2rem 5rem;
+    width: 100%;
+  }
+
+  .contenedor {
+    padding: 0 8rem;
+  }
+
+  /* MENU */
+
+  nav {
+    padding: 4rem 0;
+  }
+
   #hamburguesa li a {
     background: url("./Imagenes/menu-tablet.png") no-repeat center center;
+    height: 5.3rem;
+    width: 5.1rem;
   }
 
   #hamburguesa li:last-child a {
     background: url("./Imagenes/menu-cerrar-tablet.png") no-repeat center center;
   }
 
+  #lista-btn {
+    gap: 6rem;
+    top: 12.5em;
+  }
+
+  #lista-btn li a {
+    font-size: 2.4rem;
+  }
+
+  nav:target #lista-btn {
+    height: calc(100vh - 12.5em);
+  }
+
+  /* PORTADA */
+
   .seccion-portada {
     background: url(./Imagenes/regadera-tablet.png) center no-repeat;
+    height: calc(100vh - 19rem);
+    background-position: 75% 0%;
+    margin-top: 3rem;
+  }
+
+  .contenedor-portada {
+    gap: 1rem;
+  }
+
+  .portada-texto {
+    font-size: 3rem;
+  }
+
+  /* HUERTA */
+
+  .p-none {
+    display: none;
   }
 
   .huerta-gota-link {
+    display: none;
+  }
+
+  .huerta-articulo {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  #huerta-1:target ~ .huerta-articulo:nth-of-type(1) {
+    display: flex;
+  }
+
+  #huerta-2:target ~ .huerta-articulo:nth-of-type(2) {
+    display: flex;
+  }
+
+  #huerta-3:target ~ .huerta-articulo:nth-of-type(3) {
+    display: flex;
+  }
+
+  .huerta-articulo:nth-of-type(1),
+  .huerta-articulo:nth-of-type(3) {
+    flex-direction: row-reverse;
+  }
+
+  .huerta-articulo img {
+    transform: none;
+    /* transform: translateY(16rem); */
+  }
+
+  .huerta-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .huerta-texto-2 {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .huerta-gota-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: url(./Imagenes/huerta-link-tablet.png) center no-repeat;
+    height: 8.8rem;
+    width: 7.2rem;
+    color: #595959;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .huerta-gota-icon span {
+    font-size: 2rem;
+  }
+
+  .impacto-info p {
+    font-size: 2rem;
+    width: 75%;
+  }
+
+  /* BANNER */
+
+  .banner-texto {
+    padding: 8rem;
+    margin-bottom: 16rem;
+    box-shadow: 0 -4.8rem 9.6rem rgba(233, 235, 177, 1);
+  }
+
+  .banner-texto p {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  /* BENEFICIOS */
+
+  .impacto-items {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4rem;
+    margin: 4rem 0;
   }
 
   .impacto-info {
     background: url(./Imagenes/img-impacto-info-tablet.png) center no-repeat;
+    height: 33.9rem;
+    width: 30rem;
+    /* width: 24.1rem; */
   }
 
-  .contenedor-video {
-    background: url(./Imagenes/img-background-video-tablet.png) center no-repeat;
-  }
+  /* NEWSLETTER */
 
   .seccion-newsletter {
     background: url(./Imagenes/img-newsletter-tablet.png) center no-repeat;
+    height: 37.3rem;
   }
 
+  .contenedor-newsletter {
+    padding: 3rem 4rem;
+    grid-template-columns: 40% 60%;
+    column-gap: 2.6rem;
+  }
+
+  .texto-newsletter {
+    text-align: left;
+  }
+
+  .texto-newsletter h2 {
+    font-size: 2.4rem;
+    width: 90%;
+  }
+
+  .form-newsletter {
+    align-items: flex-start;
+    gap: 2.4rem;
+  }
+
+  .form-newsletter form {
+    width: 90%;
+  }
+
+  .form-newsletter input {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .form-newsletter input::placeholder {
+    font-size: 1.4rem;
+  }
+
+  .form-newsletter input:first-of-type {
+    margin-bottom: 2.4rem;
+  }
+
+  .btn-newsletter {
+    width: 50%;
+    padding: 1.4rem 4rem;
+    font-size: 1.8rem;
+  }
+
+  /* ACERCA DE */
+
   .acerca-articulo {
-    background: url(./Imagenes/img-nosotros-plantas-tablet.png) bottom no-repeat;
+    background: url(./Imagenes/img-nosotros-plantas-tablet.png) bottom no-repeat,
+      linear-gradient(
+        180deg,
+        rgba(241, 242, 210, 1) 31%,
+        rgba(195, 235, 246, 1) 85%
+      );
+    padding: 8rem;
+  }
+
+  /* MISIÓN */
+
+  .mision-texto {
+    flex-direction: row-reverse;
+    margin-top: 5rem;
+  }
+
+  /* FOOTER */
+
+  .seccion-footer form {
+    gap: 4rem;
+  }
+
+  .seccion-footer input,
+  textarea {
+    width: 80%;
+    padding: 1.8rem;
+  }
+
+  .seccion-footer input::placeholder {
+    font-size: 1.8rem;
+  }
+
+  .seccion-footer textarea::placeholder {
+    font-size: 1.8rem;
+  }
+
+  .btn-enviar {
+    margin-top: 2rem;
+    width: 50%;
+  }
+
+  .footer-pie p::before {
+    width: 100%;
   }
 }

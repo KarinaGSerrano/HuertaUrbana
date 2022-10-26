@@ -686,7 +686,7 @@ textarea {
 
 /* -------------------------------------- E S T I L O  M Ó V I L  G R A N D E ------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------- */
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 412px) {
   .seccion-portada {
     display: flex;
     align-items: flex-start;
@@ -891,7 +891,7 @@ textarea {
 
   /*----------------------------- S E C C I O N  -  B E N E F I C I O S-------------------------- */
 
-/*-------- I M P A C T O  E C O L Ó G I C O-------- */
+  /*-------- I M P A C T O  E C O L Ó G I C O-------- */
 
   .impacto-items {
     grid-template-columns: 1fr 1fr;
@@ -906,7 +906,7 @@ textarea {
     /* width: 24.1rem; */
   }
 
- /*-------------------------------- S E C C I O N  -  N E W S L E T T E R -------------------------- */
+  /*-------------------------------- S E C C I O N  -  N E W S L E T T E R -------------------------- */
 
   .seccion-newsletter {
     background: url(./Imagenes/img-newsletter-tablet.png) center no-repeat;
@@ -1150,7 +1150,7 @@ textarea {
 
   /*----------------------------- S E C C I O N  -  B E N E F I C I O S-------------------------- */
 
-/*-------- I M P A C T O  E C O L Ó G I C O-------- */
+  /*-------- I M P A C T O  E C O L Ó G I C O-------- */
 
   .contenedor-beneficios {
     padding: 0 15%;
@@ -1209,7 +1209,7 @@ textarea {
     background: #61b5a3;
   }
 
-   /*----------------------------------- S E C C I O N  -  N O S O T R O S ---------------------------- */
+  /*----------------------------------- S E C C I O N  -  N O S O T R O S ---------------------------- */
 
   /*-------- A C E R C A  D E -------- */
 

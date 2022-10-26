@@ -1,36 +1,6 @@
 /*-------------------------E S T I L O S  G E N E R A L E S---------------------------- */
 /* ------------------------------------------------------------------------------------ */
 
-/*
---- 01 TYPOGRAPHY SYSTEM
-
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- Font weights
-Default: 400
-Medium: 500
-Semi-bold: 600
-Bold: 700
-
-- Line heights
-Default: 1
-Small: 1.05
-Medium: 1.2
-Paragraph default: 1.6
-Large: 1.8
-
-- Letter spacing
--0.5px
-0.75px
-
-
---- 07 WHITESPACE
-
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +14,8 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  color: #595959;
+  color: #6b6b6b;
+  /* color: #595959; */
   background: linear-gradient(
     180deg,
     rgba(240, 241, 208, 1) 2%,
@@ -111,22 +82,23 @@ p {
   color: rgba(255, 255, 248, 1);
   background-color: #34b196;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: 1rem 2.5rem;
   border-radius: 3%;
   text-align: center;
   width: 50%;
+  border: none;
 }
 
-/* ------------------M O B I L E  F I R S T :  E S T I L O  C E L U L A R--------------- */
-/* ------------------------------------------------------------------------------------- */
+/* ------------------------M O B I L E  F I R S T :  E S T I L O  C E L U L A R--------------------- */
+/* ------------------------------------------------------------------------------------------------- */
 
 .contenedor {
   padding: 0 2rem;
   margin: 0 auto;
 }
 
-/*-- M E N U--*/
+/*------ M E N U------*/
 
 header {
   display: flex;
@@ -149,7 +121,6 @@ nav {
   list-style: none;
   text-indent: -100px;
   overflow: hidden;
-  /* width: 2.5em; */
 }
 
 #hamburguesa li a {
@@ -214,14 +185,17 @@ nav:target #hamburguesa li:last-child {
   display: block;
 }
 
-/*------------------------ S E C C I O N  -   P O R T A D A---------------------- */
+/*------------------------------ S E C C I O N  -   P O R T A D A---------------------------- */
 
 .seccion-portada {
   display: flex;
   align-items: flex-start;
   background: url(./Imagenes/regadera-celular.png) center no-repeat;
+  background: cover;
   height: calc(100vh - 10rem);
-  background-position: 0% 0%;
+  max-height: 300rem;
+  max-width: 500rem;
+  background-position: 60% 0%;
   margin-top: 1.5rem;
 }
 
@@ -264,7 +238,7 @@ nav:target #hamburguesa li:last-child {
   height: 2rem;
 }
 
-/*-------------------- S E C C I O N  -  A R T Í C U L O  H U E R T A-------------------- */
+/*-------------------------- S E C C I O N  -  A R T Í C U L O  H U E R T A-------------------------- */
 
 .seccion-huerta {
   margin-bottom: -1rem;
@@ -349,7 +323,7 @@ nav:target #hamburguesa li:last-child {
   position: relative;
 }
 
-/*------------------------- S E C C I O N  -  B A N N E R--------------------------- */
+/*------------------------------- S E C C I O N  -  B A N N E R--------------------------------- */
 
 .seccion-banner {
   overflow-x: hidden;
@@ -381,9 +355,9 @@ nav:target #hamburguesa li:last-child {
   color: white;
 }
 
-/*----------------------- S E C C I O N  -  B E N E F I C I O S-------------------- */
+/*----------------------------- S E C C I O N  -  B E N E F I C I O S-------------------------- */
 
-/*-- I M P A C T O  E C O L Ó G I C O-- */
+/*-------- I M P A C T O  E C O L Ó G I C O-------- */
 
 .impacto-articulo {
   margin-bottom: 3rem;
@@ -391,7 +365,7 @@ nav:target #hamburguesa li:last-child {
 
 .seccion-beneficios h3:after {
   content: "";
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #6b6b6b;
   padding-top: 0.5rem;
   width: 5rem;
 }
@@ -424,7 +398,7 @@ nav:target #hamburguesa li:last-child {
   text-align: center;
 }
 
-/*-- A L I M E N T O S  S A L U D A B L E S -- */
+/*-------- A L I M E N T O S  S A L U D A B L E S -------- */
 
 .alimentos-video {
   max-width: 100%;
@@ -436,14 +410,7 @@ nav:target #hamburguesa li:last-child {
   width: 100%;
 }
 
-/* .contenedor-video {
-  background: url(./Imagenes/img-background-video-celular.png) center no-repeat;
-  height: 25rem;
-  display: flex;
-  justify-content: center;
-} */
-
-/*-------------------- S E C C I O N  -  N E W S L E T T E R -------------------- */
+/*-------------------------------- S E C C I O N  -  N E W S L E T T E R -------------------------- */
 
 .seccion-newsletter {
   display: flex;
@@ -455,16 +422,6 @@ nav:target #hamburguesa li:last-child {
   height: 41rem;
   box-shadow: 0 -2.4rem 4.8rem rgba(233, 235, 177, 1);
 }
-
-/* .contenedor-newsletter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  background-color: rgba(102, 80, 27, 0.6);
-  padding: 2rem 0;
-} */
 
 .contenedor-newsletter {
   display: grid;
@@ -518,12 +475,22 @@ nav:target #hamburguesa li:last-child {
   margin-bottom: 1.5rem;
 }
 
-input[type="email"]:focus:invalid {
-  border: solid red 2px;
-  color: red;
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #34b196;
 }
 
-/*----------------------- S E C C I O N  -  N O S O T R O S ---------------------- */
+input[type="email"]:focus {
+  outline: none;
+  border: 2px solid #34b196;
+}
+
+input[type="email"]:focus:invalid {
+  outline: none;
+  border: solid rgb(230, 111, 111) 2px;
+}
+
+/*----------------------------------- S E C C I O N  -  N O S O T R O S ---------------------------- */
 
 .seccion-nosotros {
   margin-bottom: 0;
@@ -535,12 +502,12 @@ input[type="email"]:focus:invalid {
 
 .seccion-nosotros h3:after {
   content: "";
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #6b6b6b;
   padding-top: 0.5rem;
   width: 3rem;
 }
 
-/*-- A C E R C A  D E -- */
+/*-------- A C E R C A  D E -------- */
 
 .acerca-articulo {
   background: url(./Imagenes/img-nosotros-plantas-celular.png) bottom no-repeat,
@@ -559,7 +526,11 @@ input[type="email"]:focus:invalid {
   align-items: center;
 }
 
-/*-- M I S I Ó N -- */
+.acerca-texto picture {
+  order: 4;
+}
+
+/*-------- M I S I Ó N -------- */
 
 .mision-texto {
   display: flex;
@@ -607,7 +578,7 @@ input[type="email"]:focus:invalid {
   margin-bottom: 2rem;
 }
 
-/*----------------------- S E C C I O N  -  F O O T E R ---------------------- */
+/*----------------------------- S E C C I O N  -  F O O T E R ---------------------------- */
 
 .seccion-footer {
   overflow-x: hidden;
@@ -652,7 +623,7 @@ footer {
 
 .seccion-footer h3:after {
   content: "";
-  border-bottom: 1px solid #595959;
+  border-bottom: 1px solid #6b6b6b;
   padding-top: 0.5rem;
   width: 100%;
 }
@@ -713,15 +684,36 @@ textarea {
   width: 26rem;
 }
 
-/* -------------------------------- E S T I L O  T A B L E T ------------------------------- */
-/* ----------------------------------------------------------------------------------------- */
+/* -------------------------------------- E S T I L O  M Ó V I L  G R A N D E ------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 414px) {
+  .seccion-portada {
+    display: flex;
+    align-items: flex-start;
+    background: url(./Imagenes/regadera-celular-grande.png) center no-repeat;
+    background: cover;
+    height: calc(100vh - 10rem);
+    background-position: 65% 0%;
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  .portada-texto {
+    font-size: 2rem;
+  }
+}
+
+/* -------------------------------------- E S T I L O  T A B L E T ------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
 
 @media screen and (min-width: 768px) {
   /* GENERALES */
 
   h1 {
     font-size: 5.6rem;
-    /* font-size: 4.4rem; */
   }
 
   h2 {
@@ -766,7 +758,7 @@ textarea {
     padding: 0 8rem;
   }
 
-  /* MENU */
+  /*------------ M E N U------------ */
 
   nav {
     padding: 4rem 0;
@@ -795,7 +787,7 @@ textarea {
     height: calc(100vh - 12.5em);
   }
 
-  /* PORTADA */
+  /*------------------------------ S E C C I O N  -   P O R T A D A---------------------------- */
 
   .seccion-portada {
     background: url(./Imagenes/regadera-tablet.png) center no-repeat;
@@ -812,7 +804,7 @@ textarea {
     font-size: 3rem;
   }
 
-  /* HUERTA */
+  /*-------------------------- S E C C I O N  -  A R T Í C U L O  H U E R T A-------------------------- */
 
   .p-none {
     display: none;
@@ -847,7 +839,6 @@ textarea {
 
   .huerta-articulo img {
     transform: none;
-    /* transform: translateY(16rem); */
   }
 
   .huerta-texto {
@@ -885,7 +876,7 @@ textarea {
     width: 75%;
   }
 
-  /* BANNER */
+  /*------------------------------- S E C C I O N  -  B A N N E R--------------------------------- */
 
   .banner-texto {
     padding: 8rem;
@@ -898,7 +889,9 @@ textarea {
     font-weight: 800;
   }
 
-  /* BENEFICIOS */
+  /*----------------------------- S E C C I O N  -  B E N E F I C I O S-------------------------- */
+
+/*-------- I M P A C T O  E C O L Ó G I C O-------- */
 
   .impacto-items {
     grid-template-columns: 1fr 1fr;
@@ -913,7 +906,7 @@ textarea {
     /* width: 24.1rem; */
   }
 
-  /* NEWSLETTER */
+ /*-------------------------------- S E C C I O N  -  N E W S L E T T E R -------------------------- */
 
   .seccion-newsletter {
     background: url(./Imagenes/img-newsletter-tablet.png) center no-repeat;
@@ -963,7 +956,9 @@ textarea {
     font-size: 1.8rem;
   }
 
-  /* ACERCA DE */
+  /*----------------------------------- S E C C I O N  -  N O S O T R O S ---------------------------- */
+
+  /*-------- A C E R C A  D E -------- */
 
   .acerca-articulo {
     background: url(./Imagenes/img-nosotros-plantas-tablet.png) bottom no-repeat,
@@ -975,17 +970,21 @@ textarea {
     padding: 8rem;
   }
 
-  /* MISIÓN */
+  /*-------- M I S I Ó N --------*/
 
   .mision-texto {
     flex-direction: row-reverse;
     margin-top: 5rem;
   }
 
-  /* FOOTER */
+  /*----------------------------- S E C C I O N  -  F O O T E R ---------------------------- */
 
   .seccion-footer form {
     gap: 4rem;
+  }
+
+  .seccion-footer .img-footer img {
+    transform: translateY(8rem);
   }
 
   .seccion-footer input,
@@ -1009,5 +1008,327 @@ textarea {
 
   .footer-pie p::before {
     width: 100%;
+  }
+}
+
+/* ------------------------------------------ E S T I L O  D E S K T O P----------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  /*------- M E N U -------- */
+
+  nav {
+    padding: 4rem 0;
+  }
+
+  #hamburguesa {
+    display: none;
+  }
+
+  #lista-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    position: static;
+    height: auto;
+    text-align: right;
+    background: none;
+  }
+
+  #lista-btn li {
+    width: 15rem;
+    text-align: center;
+  }
+
+  #lista-btn li a {
+    background: none;
+    color: #595959;
+    font-size: 1.6rem;
+  }
+
+  #lista-btn .btn-huerta:hover,
+  #lista-btn .btn-beneficios:hover,
+  #lista-btn .btn-nosotros:hover {
+    padding: 0.5rem;
+    border-bottom: 2px solid #34b196;
+    color: #ad7904;
+  }
+
+  #lista-btn .btn-contacto {
+    background: #34b196;
+    color: rgba(255, 255, 248, 1);
+  }
+
+  #lista-btn .btn-contacto:hover {
+    opacity: 80%;
+  }
+
+  .btn-seguir-chevron-down {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /*------------------------------ S E C C I O N  -   P O R T A D A---------------------------- */
+
+  .portada-titulo {
+    width: 50%;
+  }
+
+  .portada-texto {
+    font-size: 2.4rem;
+    width: 30%;
+  }
+
+  .btn-seguir {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .btn-seguir:hover {
+    background: #61b5a3;
+  }
+
+  .seccion-portada {
+    background: url(./Imagenes/regadera-desktop.png) center no-repeat;
+    height: calc(100vh - 19rem);
+    background-position: 50% 2%;
+    margin-top: 3rem;
+  }
+
+  .contenedor {
+    padding: 0 8rem;
+  }
+
+  /*-------------------------- S E C C I O N  -  A R T Í C U L O  H U E R T A-------------------------- */
+
+  .contenedor-huerta {
+    padding: 0 15%;
+  }
+
+  .huerta-articulo {
+    gap: 5rem;
+  }
+
+  .huerta-gota-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./Imagenes/huerta-link-tablet-desktop.png) center no-repeat;
+    height: 8.8rem;
+    width: 7.2rem;
+    color: #595959;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .huerta-texto {
+    text-align: left;
+    align-items: center;
+  }
+
+  /*------------------------------- S E C C I O N  -  B A N N E R--------------------------------- */
+
+  .banner-texto {
+    padding: 7% 30%;
+    margin-bottom: 16rem;
+    box-shadow: 0 -4.8rem 9.6rem rgba(233, 235, 177, 1);
+  }
+
+  .banner-texto p {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  /*----------------------------- S E C C I O N  -  B E N E F I C I O S-------------------------- */
+
+/*-------- I M P A C T O  E C O L Ó G I C O-------- */
+
+  .contenedor-beneficios {
+    padding: 0 15%;
+  }
+
+  .impacto-items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 4rem;
+    margin: 4rem 0;
+  }
+
+  .impacto-info {
+    background: url(./Imagenes/img-impacto-info-desktop.png) center no-repeat;
+    height: 30rem;
+    width: 20rem;
+    /* width: 24.1rem; */
+  }
+
+  .impacto-info p {
+    font-size: 1.6rem;
+    width: 75%;
+  }
+
+  /*-------------------------------- S E C C I O N  -  N E W S L E T T E R -------------------------- */
+
+  .seccion-newsletter {
+    background: url(./Imagenes/img-newsletter-desktop.png) center no-repeat;
+    height: 44rem;
+    box-shadow: 0 -2.4rem 4.8rem rgba(233, 235, 177, 1);
+    background-position: 50% 10%;
+  }
+
+  .contenedor-newsletter {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 40% 1fr;
+    row-gap: 2rem;
+    background-color: rgba(102, 80, 27, 0.6);
+    padding: 4% 15%;
+  }
+
+  .texto-newsletter {
+    align-items: flex-start;
+  }
+
+  .texto-newsletter h2 {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .form-newsletter form {
+    width: 100%;
+  }
+
+  .btn-newsletter:hover {
+    background: #61b5a3;
+  }
+
+   /*----------------------------------- S E C C I O N  -  N O S O T R O S ---------------------------- */
+
+  /*-------- A C E R C A  D E -------- */
+
+  .acerca-articulo {
+    background: url(./Imagenes/img-nosotros-plantas-desktop.png) bottom
+        no-repeat,
+      linear-gradient(
+        180deg,
+        rgba(241, 242, 210, 1) 31%,
+        rgba(195, 235, 246, 1) 85%
+      );
+    padding: 8rem 15%;
+  }
+
+  .acerca-texto {
+    display: block;
+  }
+
+  .img-nosotros {
+    float: left;
+    padding: 0 4rem 4rem 0;
+  }
+
+  #texto-visible p:nth-child(3) {
+    opacity: 100%;
+  }
+
+  .texto-oculto {
+    display: block;
+  }
+
+  .acerca-ver:link,
+  .acerca-ver:visited {
+    display: none;
+  }
+
+  /*-------- M I S I Ó N -------- */
+
+  .mision-articulo {
+    padding: 8rem 15%;
+  }
+
+  .mision-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mision-texto picture {
+    margin-bottom: 2rem;
+  }
+
+  .mision-texto {
+    flex-direction: row-reverse;
+    margin-top: 5rem;
+  }
+
+  /*----------------------------- S E C C I O N  -  F O O T E R ---------------------------- */
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 14rem 10% 4rem 10%;
+  }
+
+  /*-------- GRID COLUMNAS Y FILAS --------*/
+
+  .footer-texto {
+    grid-column: 1 / -1;
+  }
+
+  .footer-redes-sociales {
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+  }
+
+  .btn-enviar {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
+
+  .footer-pie {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+  }
+  /* ------------------------- */
+
+  .footer-texto h2 {
+    justify-content: flex-start;
+  }
+
+  .footer-texto p {
+    font-size: 2.4rem;
+  }
+
+  .footer-redes-sociales {
+    margin-bottom: 0;
+  }
+
+  .seccion-footer form {
+    align-items: flex-start;
+  }
+
+  .btn-enviar {
+    margin-bottom: 18rem;
+  }
+
+  .btn-enviar:hover {
+    background: #61b5a3;
+  }
+
+  .footer-iconos-redes-sociales {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .seccion-footer .img-footer img {
+    transform: translateY(10rem);
+    object-fit: none;
   }
 }

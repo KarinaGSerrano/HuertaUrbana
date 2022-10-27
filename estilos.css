@@ -1100,6 +1100,11 @@ textarea {
     width: 30%;
   }
 
+  .portada-seguir {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
   .btn-seguir {
     display: flex;
     justify-content: flex-start;

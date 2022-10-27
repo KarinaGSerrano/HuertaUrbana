@@ -1105,14 +1105,6 @@ textarea {
     margin-right: auto;
   }
 
-  .btn-seguir {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
   .btn-seguir:hover {
     background: #61b5a3;
   }
